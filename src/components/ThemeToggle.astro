@@ -1,0 +1,42 @@
+---
+import Sun from '../components/icons/Sun.astro'
+import Moon from '../components/icons/Moon.astro'
+
+---
+
+
+<button id="change-theme" class="
+        block cursor-pointer
+        p-1 box-border
+        border  border-transparent rounded-md hover:border-1
+        hover:bg-neutral-200 dark:hover:bg-neutral-900
+        transition duration-150
+        ">
+    <Sun class="size-3  md:size-4 hidden dark:block "/>
+    <Moon class="size-3 md:size-4 block dark:hidden"/>
+</button>
+
+
+<script>
+
+    const themeBtn = document.getElementById('change-theme');
+    themeBtn?.addEventListener('click', () => {
+        if (document.documentElement.classList.contains('dark')) {
+            setTheme('light');
+        } else {
+            setTheme('dark');
+        }
+    });
+
+    function setTheme(theme:string) {
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                document.documentElement.classList.remove('light');
+            } else {
+                document.documentElement.classList.add('light');
+                document.documentElement.classList.remove('dark');
+            }
+            localStorage.theme = theme;
+    }
+
+</script>

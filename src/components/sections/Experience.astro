@@ -1,0 +1,29 @@
+---
+import ExperienceItem from './ExperienceItem.astro'
+import Emidds7 from '../icons/Emidds7.astro'
+
+const EXPERIENCE = [
+  {
+    date: "Currently...",
+    title: "Software Engineering Intern",
+    Logo : Emidds7,
+    company : 'NASA | EMIDDS-7',
+    description: "Collaborating in the creation of a robust algorithm to identify star patterns and perform efficient satellite navigation.",
+    link: "https://cruce.iteso.mx/satelite-del-iteso-viaja-con-la-nasa",
+  },
+];
+
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 mx-3.5">
+
+    {
+        EXPERIENCE.map( exp => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...exp}/>
+            </li>
+        ))
+    }
+
+</ol>

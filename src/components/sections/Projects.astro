@@ -1,0 +1,116 @@
+---
+
+import React from '../icons/React.astro'
+import Javascript from '../icons/Javascript.astro';
+import Html from '../icons/Html.astro';
+import Css from '../icons/Css.astro';
+import Tailwind from '../icons/Tailwind.astro';
+import Github from '../icons/Github.astro';
+import LinkButton from '../common/LinkButton.astro';
+import Url from '../icons/Url.astro';
+
+
+const TAGS = {
+    REACT : {
+        name : 'React',
+        class : 'text-white bg-[#1E3A8A]/80',
+        icon : React
+    },
+    JAVASCRIPT : {
+        name : 'Javascript',
+        class : 'text-white bg-[#B45309]/80',
+        icon : Javascript
+    },
+    HTML : {
+        name : 'HTML',
+        class : 'text-white bg-[#9B2C2C]/80',
+        icon : Html
+    },
+    CSS : {
+        name : 'CSS',
+        class : 'text-white bg-[#2B6CB0]/80',
+        icon : Css
+    },
+    TAILWIND : {
+        name : 'Tailwind',
+        class : 'text-white bg-[#1A5E5E]/80',
+        icon : Tailwind
+    }
+}
+
+
+const PROJECTS = [
+  {
+        title: "Movie Search App",
+        description: "🎥  A movie search application that allows users to search for movies using The Movie Database (TMDB) API and displays trending movies using data stored in Appwrite.",
+        link: "https://moviesbangsearch.netlify.app",
+        github : 'https://github.com/mr-Mariano/Movie-Search',
+        image :'./MovieSearch.png',
+        tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.CSS, TAGS.HTML, TAGS.TAILWIND],
+  }
+];
+
+---
+
+    {
+        PROJECTS.map( ({ title, description, link, github, image, tags })  => (
+            <article class="flex flex-col py-[16px] px-[12px] md:gap-x-6 md:flex md:flex-row mb-18 align-center justify-center
+            ">
+                <div class="md:w-1/2 order-2 md:order-2">
+                <h3
+                    class = 'text-lg  md:text-2xl font-bold mb-4'>
+                    { title }
+                </h3>
+                <ul class = 'flex flex-row flex-wrap gap-x-2 gap-y-2 mb-4'>
+                    {
+                        tags.map(tag => (
+                            <li>
+                                <span class="
+                                    text-[#404040] dark:text-[#D4D4D4]
+                                    bg-[#E5E5E580] dark:bg-[#26262699]
+                                    flex gap-x-2 rounded-md
+                                    items-center
+                                    px-[8px] py-[4px]
+                                    w-.9  md:w-full
+                                    text-xs sm:text-sm font-medium
+                                    ">
+                                    <tag.icon class="size-4"/>
+                                    {tag.name}
+                                </span>
+                            </li>
+                        ))
+                    }
+                </ul>
+                <p class = ' mb-4 text-pretty'>
+                    { description }
+                </p>
+                <div class = 'flex flex-row gap-x-2 mb-4'>
+                {
+                    link && (
+                        <LinkButton link={ github }>
+                            Github
+                            <Github class="w-3 h-3 ms-2 rtl:rotate-180" />
+                        </LinkButton>
+                    )
+                }
+                {
+                    github && (
+                        <LinkButton link={ link }>
+                            View Project
+                            <Url class="w-3 h-3 ms-2 rtl:rotate-180" />
+                        </LinkButton>
+                    )
+                }
+                </div>
+                </div>
+                <div class="flex order-1 md:order-1 md:w-1/2 overflow-hidden border-neutral-50 hover:border-white rounded-lg pb-4">
+                    <img
+                        class = ' rounded shadow-white/10 shadow-2xl w-full h-1/2 md:size-full lg:w-full lg:h-full object-cover hover:scale-95 transform transition-transform duration-500'
+                        src={image}
+                        alt={`captura de pantalla del proyecto ${image}`}/>
+                </div>
+            </article>
+        ))
+    }
+
+ 

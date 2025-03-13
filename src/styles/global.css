@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-violet: oklch(0.491 0.27 292.581);
+    --color-sky: oklch(0.746 0.16 232.661);
+    --color-violet-hover: oklch(0.541 0.281 293.009);
+    --color-sky-hover: oklch(0.746 0.16 232.661);
+    --color-neutral: #333;
+}

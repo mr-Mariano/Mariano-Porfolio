@@ -1,0 +1,28 @@
+---
+
+const GIF = '/Avatar.gif'
+
+---
+<section class="flex flex-col md:flex-row gap-8 justify-center items-center">
+
+    <div class="text-sm [&>p]:mb-4 [&>p]:md:text-base [&>p>strong]:text-violet-700/90 dark:[&>p>strong]:text-sky-400/80  [&>p>strong]:font-semibold text-pretty order-2 md:order-1">
+        <p>
+            My name is <strong class="ui-mono">Luis Mariano</strong>, but you can call me Mariano. I started programming in mid-2023, when I left my career in <strong class="ui-mono">sports management</strong>, looking for a change that would motivate me and allow me to grow professionally.
+        </p>
+        <p>
+            I am currently studying <strong class="ui-mono">Software Development and Artificial Intelligence Engineering</strong> at ITESO, in Guadalajara, Jalisco.
+        </p>
+        <p>
+            I have a special interest in contributing to projects that have a positive impact on people, where <strong class="ui-mono">technology</strong> is truly a means to improve our lives and not the reason for our existence.
+        </p>
+    </div>
+    <img src={GIF} alt="Mariano Romo" class="size-25 md:size-40 rounded-full order-1 md:order-2"/>
+</section>
+
+<style>
+
+    .ui-mono {
+        font-family: 'Space Mono', monospace;
+	}
+
+</style>

@@ -1,11 +1,126 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import AboutMe from '../components/sections/AboutMe.astro';
+import Badge from '../components/common/Badge.astro';
+import Experience from '../components/sections/Experience.astro';
+import Footer from '../components/sections/Footer.astro';
+import Github from '../components/icons/Github.astro';
 import Layout from '../layouts/Layout.astro';
+import LinkedIn from '../components/icons/LinkedIn.astro';
+import Mail from '../components/icons/Mail.astro';
+import Profile from '../components/icons/Profile.astro';
+import Project from '../components/icons/Project.astro';
+import Projects from '../components/sections/Projects.astro';
+import SectionContainer from '../components/sections/SectionContainer.astro';
+import SocialPill from '../components/common/SocialPill.astro';
+import Work from '../components/icons/Work.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const LINKEDIN = "https://linkedin.com/in/mariano-romo"
+const GITHUB = 'https://github.com/mr-Mariano'
+const MAIL = 'mailto:mariano_romoo@hotmail.com'
+const PHOTO = 'https://media.licdn.com/dms/image/v2/D4D03AQGLhSKMG0K4oA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1714860576114?e=1746057600&v=beta&t=Rt-aSbXf9aLRIEgqU3yxwoMgZaQS9LcOadyMGXGbfbs'
+
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Mariano Romo Porfolio" description="Mariano Romo Porfolio as a software engineer and web developer">
+	<main class="px-2">
+
+		<SectionContainer id="start" class=" pt-44 pb-22 ">
+				<div class="
+					flex flex-row
+					mb-4 gap-x-4
+					justify-start items-center">
+					<img
+						src={PHOTO}
+						alt="Mariano Romo"
+						class="rounded-full size-12"
+					/>
+					<a
+						href={MAIL}
+						target="_blank"
+						rel="noopener"
+						class=" flex justify-center items-center"
+						>
+						<Badge class="text-xs md:text-sm">
+							I am available for hire
+						</Badge>
+					</a>
+				</div>
+				<h1 class="
+					font-bold text-2xl md:text-3xl lg:text-4xl
+					flex flex-row items-center gap-x-4
+					text-left pb-4 lg:pb-10
+				">
+					Hey, I'm  Mariano Romo 👋
+				</h1>
+				<h2 class="
+					text-sm  md:text-xl lg:text-1xl
+					opacity-90
+					text-wrap
+					max-w-[500px]
+				">
+						<span class="text-violet dark:text-sky font-bold">
+							Software Engineering and Artificial Intelligence student at
+						</span>
+						ITESO from CDMX, Mexico 🇲🇽.
+				</h2>
+				<nav class="
+					flex mt-8
+					gap-x-2 gap-y-2
+					flex-wrap
+				">
+					<SocialPill href={LINKEDIN}>
+						<LinkedIn class=" size-4 md:size-6"/>
+						Linkedin
+					</SocialPill>
+					<SocialPill href={GITHUB}>
+						<Github class=" size-4 md:size-6"/>
+						Github
+					</SocialPill>
+					<SocialPill href={MAIL}>
+						<Mail class=" size-4 md:size-6"/>
+						Mail
+					</SocialPill>
+				</nav>
+			
+		</SectionContainer>
+
+
+		<SectionContainer id="experience" class="pt-18">
+			<h3 class="
+				text-2xl md:text-3xl lg:text-4xl font-semibold
+				mb-8 flex gap-x-2
+				text-center items-center">
+				<Work class="sm:size-4 md:size-8"/>
+				Work Experience
+			</h3>
+			<Experience/>
+		</SectionContainer>
+
+		<SectionContainer id="projects" class="pt-18">
+			<h3 class="
+				text-2xl md:text-3xl lg:text-4xl font-semibold
+				mb-[26px] flex gap-x-2
+				text-center items-center">
+				<Project class="sm:size-4 md:size-8"/>
+				Projects
+			</h3>
+			<Projects/>
+		</SectionContainer>
+
+		<SectionContainer id="about-me" class="pt-18">
+			<h3 class="
+				text-2xl md:text-3xl lg:text-4xl font-semibold
+				mb-8 flex gap-x-2
+				text-center items-center">
+				<Profile class="sm:size-4 md:size-8"/>
+				About Me
+			</h3>
+			<AboutMe/>
+		</SectionContainer>
+
+		<SectionContainer>
+			<Footer/>
+		</SectionContainer>
+
+	</main>
 </Layout>

@@ -1,0 +1,61 @@
+---
+import ThemeToggle from "../components/ThemeToggle.astro";
+
+
+const navItems = [
+  {
+    title: "Experience",
+    label: "experience",
+    url: "/#experience",
+  },
+  {
+    title: "Projects",
+    label: "projects",
+    url: "/#projects",
+  },
+  {
+    title: "About",
+    label: "about-me",
+    url: "/#about-me",
+  },
+  {
+    title: "Contact",
+    label: "contact",
+    url: "mailto:mariano_romoo@hotmail.com",
+  },
+]
+---
+
+
+<header class="
+    fixed top-0 z-10 left-1/2 transform -translate-x-1/2">
+    <nav class="
+        align-center
+        flex flex-row
+        px-4 py-2 mx-auto mt-4
+        space-between
+        rounded-full
+        text-neutral dark:text-white
+        text-xs md:text-sm font-medium
+        backdrop-blur-2xl
+    ">
+        {
+            navItems.map( item => (
+                <a aria-label={item.label}
+                href={item.url}
+                class="
+                    flex
+                    rounded-full px-2 transition
+                    items-center justify-center
+                    cursor-pointer 
+                    hover:text-violet-hover dark:hover:text-sky-hover
+                ">
+                    {item.title}
+                </a>
+            ))
+
+        }
+        <ThemeToggle/>
+
+    </nav>
+</header>
