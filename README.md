@@ -1,20 +1,55 @@
-# Astro Starter Kit: Basics
+# Mi Proyecto de Portafolio
+
+Este es el README para mi proyecto de portafolio. Aquí encontrarás información sobre cómo configurar y ejecutar el proyecto.
+
+## 🚀 Comenzando
+
+Para comenzar con este proyecto, clona el repositorio y navega a la carpeta del proyecto:
 
 ```sh
-bun create astro@latest -- --template basics
+git clone https://github.com/tu-usuario/tu-repositorio.git
+cd tu-repositorio
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 📦 Instalación
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Instala las dependencias necesarias utilizando `bun`:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+```sh
+bun install
+```
 
-## 🚀 Project Structure
+## 🧑‍💻 Desarrollo
 
-Inside of your Astro project, you'll see the following folders and files:
+Para iniciar el servidor de desarrollo, ejecuta:
+
+```sh
+bun dev
+```
+
+El servidor de desarrollo estará disponible en `http://localhost:4321`.
+
+## 🏗️ Construcción
+
+Para construir el sitio para producción, ejecuta:
+
+```sh
+bun build
+```
+
+Los archivos de producción se generarán en la carpeta `./dist/`.
+
+## 👀 Vista previa
+
+Para previsualizar tu sitio de producción localmente, ejecuta:
+
+```sh
+bun preview
+```
+
+## 📂 Estructura del Proyecto
+
+Dentro de tu proyecto, verás los siguientes archivos y carpetas:
 
 ```text
 /
@@ -28,21 +63,21 @@ Inside of your Astro project, you'll see the following folders and files:
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Para aprender más sobre la estructura de carpetas de un proyecto Astro, consulta [nuestra guía sobre la estructura del proyecto](https://docs.astro.build/en/basics/project-structure/).
 
-## 🧞 Commands
+## 🧞 Comandos
 
-All commands are run from the root of the project, from a terminal:
+Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 
-| Command                   | Action                                           |
+| Comando                   | Acción                                           |
 | :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+| `bun install`             | Instala las dependencias                         |
+| `bun dev`                 | Inicia el servidor de desarrollo en `localhost:4321` |
+| `bun build`               | Construye tu sitio de producción en `./dist/`    |
+| `bun preview`             | Previsualiza tu construcción localmente          |
+| `bun astro ...`           | Ejecuta comandos CLI como `astro add`, `astro check` |
+| `bun astro -- --help`     | Obtén ayuda usando el CLI de Astro               |
 
-## 👀 Want to learn more?
+## 👀 ¿Quieres aprender más?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Siéntete libre de consultar [nuestra documentación](https://docs.astro.build) o unirte a nuestro [servidor de Discord](https://astro.build/chat).
