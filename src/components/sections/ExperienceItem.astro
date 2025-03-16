@@ -1,6 +1,5 @@
 ---
 import LinkButton from '../common/LinkButton.astro'
-import Emidds7 from '../icons/Emidds7.astro'
 
 interface Props {
     title :  string
@@ -8,11 +7,11 @@ interface Props {
     date: string
     description : string
     link ?: string
-    Logo ?: any
+    logo ?: any
 }
 
 
-const { company , date, title, description, link , Logo } =  Astro.props
+const { company , date, title, description, link , logo } =  Astro.props
 
 ---
 
@@ -29,38 +28,50 @@ border-violet bg-violet  dark:border-sky  dark:bg-sky"
     rounded-xl
     transition-all duration-100 ease-in-out transform-gpu
     box-content
-    hover:shadow-lg hover:drop-shadow-2xl
+    drop-shadow-2xl
 ">
 <time class="
-    md:text-sm text-xs
+    md:text-sm text-xs 
     font-normal leading-none
-    text-neutral-700 dark:text-sky-100/80 ml-8 ">
+    text-neutral-700 dark:text-sky-100/80 ml-12">
     { date }
 </time>
 
 <h3 class="
     hover:underline hover:decoration-dotted
     text-md md:text-lg font-semibold text-violet-700/90 dark:text-sky
-    flex gap-x-2 items-center mt-2">
-    <Logo class='size-4'/>
+    flex  gap-x-4 items-center mt-2 ">
+    <div class="
+    relative flex
+    rounded-full
+    justify-center items-center
+    bg-gray-300/90 dark:bg-zinc-800
+    px-[3.5px] py-[3.5px]
+    box-content shrink-0
+    shadow-lg shadow-zinc-900/20
+   ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50dark:ring-0">
+        <img src={logo} alt={company} class="
+        size-6
+        object-contain aspect-square"/>
+    </div>
 
-    { title }
+    <span class="flex-1">{ title }</span>
 </h3>
 
 <h4 class="
     text-md md:text-lg
     font-extralight font-stretch-semi-expanded text-violet dark:text-sky
-    items-center ml-8 ">
+    items-center ml-12 ">
     { company }
 </h4>
 
-<p class="mb-4 text-sm md:text-base font-normal  dark:text-gray-400 ml-8">
+<p class="mb-4 text-sm md:text-base font-normal  dark:text-gray-400 ml-12">
     { description }
 </p>
 
 {
     link && (
-            <LinkButton link={ link } className="ml-8 group">
+            <LinkButton link={ link } className="ml-12 group">
                 Learn more...
 
                 <svg class="w-3 h-3 ms-2 rtl:rotate-180 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
