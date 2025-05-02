@@ -9,3 +9,8 @@
     --color-sky-hover: oklch(0.746 0.16 232.661);
     --color-neutral: #333;
 }
+
+
+.computer-text {
+    font-family: "Geist Mono", monospace;
+}

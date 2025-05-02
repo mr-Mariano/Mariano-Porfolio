@@ -47,7 +47,15 @@ const PROJECTS = [
         github : 'https://github.com/mr-Mariano/Movie-Search',
         image :'./MovieSearch.png',
         tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.CSS, TAGS.HTML, TAGS.TAILWIND],
-  }
+  },
+  {
+        title: "Discretion Toolkit",
+        description: "An interactive toolkit for solving problems in logic and discrete structures, featuring tools for set theory, graph visualization, and logical equivalences.",
+        link: "https://discretion.netlify.app/",
+        github: "https://github.com/mr-Mariano/ToolKit-Discretion/tree/main",
+        image: "./Discretion.png",
+        tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.TAILWIND]
+  },
 ];
 
 ---
@@ -61,7 +69,7 @@ const PROJECTS = [
                     class = 'text-lg  md:text-2xl font-bold mb-4'>
                     { title }
                 </h3>
-                <ul class = 'flex flex-row flex-wrap gap-x-2 gap-y-2 mb-4'>
+                <ul class = 'computer-text flex flex-row flex-wrap gap-x-2 gap-y-2 mb-4'>
                     {
                         tags.map(tag => (
                             <li>
